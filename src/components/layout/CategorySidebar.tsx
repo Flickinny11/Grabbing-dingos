@@ -20,40 +20,40 @@ const categories = [
     icon: Image,
     href: '/image',
     color: 'from-electric-blue to-neon-cyan',
-    count: 15,
-    description: 'DALL-E, Midjourney, Stable Diffusion & more'
+    count: 22,
+    description: 'DALL-E, Midjourney, Flux, SDXL & more'
   },
   {
     name: 'Video Generation', 
     icon: Video,
     href: '/video',
     color: 'from-iridescent-purple to-coral-pink',
-    count: 12,
-    description: 'Minimax, Kling, Runway & more'
+    count: 20,
+    description: 'Runway Gen-4, Google, Hunyuan & more'
   },
   {
     name: 'Audio Generation',
     icon: Headphones, 
     href: '/audio',
     color: 'from-neon-green to-golden-yellow',
-    count: 18,
-    description: 'ElevenLabs, Murf, Stability AI & more'
+    count: 27,
+    description: 'ElevenLabs, Suno, Udio, Murf & more'
   },
   {
     name: '3D Generation',
     icon: Box,
     href: '/3d', 
     color: 'from-coral-pink to-iridescent-purple',
-    count: 8,
-    description: 'Meshy, Luma AI, Kaedim & more'
+    count: 20,
+    description: 'Meshy, Luma AI, NeRF & more'
   },
   {
     name: 'Text & Language',
     icon: Type,
     href: '/text',
     color: 'from-golden-yellow to-electric-blue',
-    count: 22,
-    description: 'GPT-4, Claude, Gemini & more'
+    count: 25,
+    description: 'GPT-4, Claude, Gemini, Llama & more'
   },
   {
     name: 'Workflows',
@@ -66,7 +66,7 @@ const categories = [
 ];
 
 const quickStats = [
-  { label: 'Active Services', value: '80+', icon: Sparkles },
+  { label: 'Active Services', value: '114+', icon: Sparkles },
   { label: 'Monthly Generations', value: '2.5M+', icon: TrendingUp },
   { label: 'Avg Response Time', value: '1.2s', icon: Clock },
   { label: 'User Rating', value: '4.9/5', icon: Star },
