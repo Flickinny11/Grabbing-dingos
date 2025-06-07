@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { DemoAuthProvider } from "@/components/providers/DemoAuthProvider";
 
 export const metadata: Metadata = {
   title: "Hi-API - Premium AI Service Aggregator",
@@ -25,7 +26,9 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className="font-inter antialiased min-h-screen bg-gradient-light">
-        {children}
+        <DemoAuthProvider>
+          {children}
+        </DemoAuthProvider>
       </body>
     </html>
   );

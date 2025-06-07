@@ -9,6 +9,8 @@ const nextConfig = {
   },
   assetPrefix: process.env.NODE_ENV === 'production' ? '/Grabbing-dingos/' : '',
   basePath: process.env.NODE_ENV === 'production' ? '/Grabbing-dingos' : '',
+  // Exclude API routes from static export for now
+  // In production, these would be handled by a backend server
 };
 
 export default nextConfig;
