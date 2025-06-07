@@ -1,0 +1,30 @@
+API Aggregator similar to www.piapi.ai but with more services
+Name: hi-api
+Description:
+Website that is an api aggregator similar to www.piapi.com, allowing users to create an account and quickly configure api settings to retrieve image, video, 3D, audio, speech, sound fx, text services and more from the most comprehenensive list of providers. 
+- Providers of services should be extremely comprehensive wnd offer not only the largest selection of providers but also all options of each provider - an example would be Mini max video has multiple types of video models that can be used and each should be included and also fully configured with instructions for each model.
+- Full instructions for each model/service so users understand how to use each correctly.
+Style and layout:
+- Modern, high tech, 3D animations, light theme with semi translucent color accent designs, 3D aninated buttons, extremely beautiful, user friendly.
+- Modern, animated dropdown menus that are easy to navigate, 3D, allowing users to select from category (audio, video, image, 3D, text, agent, etc) and then each category page is beautifully designed, with large colored logos and easy sortable multiple ways, users can sort from quality, speed, name of provider, recent, cost, censorship, style and more amd also can sort by sewrching with text.
+- Each video and image provider is represented with a large color logo and large thumbnail image/video that is ACTUALLY from their service to shownusers the quality; videos play on hover. 
+- All services available for each provider are also represented to aloow ueers to edit (example is tat stable diffusion has comprehensive editing tools and upscalling tools and blending tools and TONS of other tools for editing and modifying image/video and all should be represented)
+- Users can mix and match providers and services and tools, so they can make a minimax video and then use a SD editing tool to upscale and then a kling blending service and can "chain" services together to create higher quality, longer and more accurate videos, and higher quality more accurate images. - copilot should use additional creativity and enhance this even further to allow more options that help users have extensive options.
+- Each category has its own queue. image has a "canvas" page so users can visit the canvas, select any media they generated in the category and continue editing it with the other ai service plus a full suite of image/video editing services and components available that extend the function. video has a full robust video editor with timeline view and drag and drop, selector, comprehensive video editing tools, etc. image category also has comprehensive canvas and image editing
+tools.
+- The flow allows users either use this service via api only or use the website if they want manual editing options and to save and upload media. this allows a beautiful, comprehensive media editing, allowing users to import from local or from what was generated in this site. audio is similar but with timeline wav form visual editor, also with extremely comprehensive robust audio editing and processing tools, stem splitter, track and instrument enhancer, individual instrument effects and 
+processing and modeling, vocal effects suite, track doubling, massive list of vical effects, mixing, mastering, etc.
+
+- All services are chainable via api call allowing users to easily use multiple media services in their apps/sites. 
+- The queue must be intuitive and configured correct so isers do actually see the media they created in this.
+- 3D services are represented similar to ither media services with 3D mesh sorciric options in the "canvas" editor view so users can upload any 3D mesh into the editor and continue editing with the 3D ai services and manual 3D editor with a full robust suite if 3d editing tools available. configure it all intuitively 
+
+payment processing with stripe - i will provide api key later 
+one click auth with google and github
+credits issued are equal to $'s - all services marked up 40% - all services must come from cheapest possible source - only cost are ai services.
+users have to load at least $5 in stripe to use service - options for advwnced users and enterprise available - create these tiers and integrate into the oayment processing and credits system allowing only 20% markup - cost for each service is displayed in real currency on section where user generates so they see that cost before generating it somewhere in the section.
+users only see their cost and not mine.
+
+All services are real, fully integrated api setvices. Queue is real and really pulls in media. text and agent services are comprehensive with comprehensive options available. all ai services wre for both api use and on page use.
+
+- Anything i missed copilot will add to make commercially ready.
