@@ -44,15 +44,16 @@ interface ImageProvider {
 }
 
 const imageProviders: ImageProvider[] = [
+  // OpenAI Models
   {
-    id: 'dalle3',
+    id: 'dalle3-hd',
     name: 'DALL-E 3',
-    displayName: 'DALL-E 3',
+    displayName: 'DALL-E 3 HD',
     description: 'OpenAI\'s most advanced image generation model with exceptional prompt understanding and detail.',
     logo: '🎨',
     rating: 4.9,
-    pricing: { basePrice: 0.04, currency: 'USD', unit: 'image' },
-    features: ['High-resolution', 'Natural language prompts', 'Style variations', 'Safety filtering'],
+    pricing: { basePrice: 0.08, currency: 'USD', unit: 'image' },
+    features: ['Ultra-high resolution', 'Natural language prompts', 'Style variations', 'Safety filtering'],
     category: 'General Purpose',
     speed: 'medium',
     quality: 'high',
@@ -64,7 +65,45 @@ const imageProviders: ImageProvider[] = [
     sampleImages: ['/samples/dalle3-1.jpg', '/samples/dalle3-2.jpg']
   },
   {
-    id: 'midjourney',
+    id: 'dalle3-standard',
+    name: 'DALL-E 3',
+    displayName: 'DALL-E 3 Standard',
+    description: 'Standard quality version of DALL-E 3 for cost-effective generation.',
+    logo: '🎨',
+    rating: 4.8,
+    pricing: { basePrice: 0.04, currency: 'USD', unit: 'image' },
+    features: ['High resolution', 'Natural language prompts', 'Style variations', 'Safety filtering'],
+    category: 'General Purpose',
+    speed: 'fast',
+    quality: 'high',
+    censorship: 'strict',
+    styles: ['Photorealistic', 'Artistic', 'Digital Art', 'Oil Painting', '3D Render'],
+    sizes: ['1024x1024', '1024x1792', '1792x1024'],
+    sampleImages: ['/samples/dalle3-1.jpg', '/samples/dalle3-2.jpg']
+  },
+
+  // Midjourney Models
+  {
+    id: 'midjourney-v7',
+    name: 'Midjourney',
+    displayName: 'Midjourney v7',
+    description: 'Latest Midjourney model with enhanced realism and artistic capabilities.',
+    logo: '🎭',
+    rating: 4.9,
+    pricing: { basePrice: 0.04, currency: 'USD', unit: 'image' },
+    features: ['Enhanced realism', 'Style consistency', 'Upscaling', 'Variations', 'Character references'],
+    category: 'Artistic',
+    speed: 'medium',
+    quality: 'high',
+    censorship: 'moderate',
+    styles: ['Fantasy Art', 'Concept Art', 'Portraits', 'Landscapes', 'Architecture'],
+    sizes: ['1024x1024', '1024x1456', '1456x1024', '1024x1820', '1820x1024'],
+    badge: 'Latest Model',
+    isPopular: true,
+    sampleImages: ['/samples/midjourney-1.jpg', '/samples/midjourney-2.jpg']
+  },
+  {
+    id: 'midjourney-v6',
     name: 'Midjourney',
     displayName: 'Midjourney v6',
     description: 'Industry-leading AI art generator known for stunning artistic and aesthetic results.',
@@ -80,6 +119,82 @@ const imageProviders: ImageProvider[] = [
     sizes: ['1024x1024', '1024x1456', '1456x1024', '1024x1820', '1820x1024'],
     badge: 'Best Quality',
     sampleImages: ['/samples/midjourney-1.jpg', '/samples/midjourney-2.jpg']
+  },
+
+  // Flux Models
+  {
+    id: 'flux-pro-v2',
+    name: 'Flux Pro',
+    displayName: 'Flux Pro v2',
+    description: 'Latest Flux model with superior prompt adherence and fine details.',
+    logo: '🌟',
+    rating: 4.8,
+    pricing: { basePrice: 0.06, currency: 'USD', unit: 'image' },
+    features: ['Ultra-high resolution', 'Precise control', 'Fast generation', 'Text rendering'],
+    category: 'Premium',
+    speed: 'fast',
+    quality: 'high',
+    censorship: 'moderate',
+    styles: ['Photorealistic', 'Hyperrealistic', 'Fine Art', 'Technical', 'Scientific'],
+    sizes: ['1024x1024', '1344x768', '768x1344', '1536x640', '640x1536'],
+    badge: 'Latest Model',
+    sampleImages: ['/samples/flux-1.jpg', '/samples/flux-2.jpg']
+  },
+  {
+    id: 'flux-dev',
+    name: 'Flux Dev',
+    displayName: 'Flux Dev',
+    description: 'Developer-friendly Flux model with open weights and customization options.',
+    logo: '⚡',
+    rating: 4.6,
+    pricing: { basePrice: 0.025, currency: 'USD', unit: 'image' },
+    features: ['Open weights', 'Customizable', 'High quality', 'Developer tools'],
+    category: 'Open Source',
+    speed: 'fast',
+    quality: 'high',
+    censorship: 'permissive',
+    styles: ['Realistic', 'Artistic', 'Technical', 'Custom Styles', 'Fine-tuned'],
+    sizes: ['512x512', '768x768', '1024x1024', '1536x1024', '1024x1536'],
+    badge: 'Open Source',
+    sampleImages: ['/samples/flux-dev-1.jpg', '/samples/flux-dev-2.jpg']
+  },
+  {
+    id: 'flux-schnell',
+    name: 'Flux Schnell',
+    displayName: 'Flux Schnell',
+    description: 'Ultra-fast Flux model optimized for speed without compromising quality.',
+    logo: '💨',
+    rating: 4.4,
+    pricing: { basePrice: 0.015, currency: 'USD', unit: 'image' },
+    features: ['Ultra-fast', 'Good quality', 'Efficient', 'Real-time capable'],
+    category: 'Fast',
+    speed: 'fast',
+    quality: 'medium',
+    censorship: 'moderate',
+    styles: ['Quick sketches', 'Concepts', 'Rapid prototyping', 'Real-time'],
+    sizes: ['512x512', '768x768', '1024x1024'],
+    badge: 'Fastest',
+    sampleImages: ['/samples/flux-schnell-1.jpg', '/samples/flux-schnell-2.jpg']
+  },
+
+  // Stable Diffusion Models
+  {
+    id: 'stable-diffusion-3-5',
+    name: 'Stable Diffusion',
+    displayName: 'Stable Diffusion 3.5',
+    description: 'Latest Stable Diffusion model with enhanced quality and better text rendering.',
+    logo: '⚡',
+    rating: 4.7,
+    pricing: { basePrice: 0.025, currency: 'USD', unit: 'image' },
+    features: ['Enhanced quality', 'Better text', 'ControlNet', 'Inpainting', 'Open source'],
+    category: 'Open Source',
+    speed: 'fast',
+    quality: 'high',
+    censorship: 'permissive',
+    styles: ['Anime', 'Realistic', 'Abstract', 'Pixel Art', 'Watercolor'],
+    sizes: ['512x512', '768x768', '1024x1024', '1536x1024', '1024x1536'],
+    badge: 'Latest SD',
+    sampleImages: ['/samples/sd35-1.jpg', '/samples/sd35-2.jpg']
   },
   {
     id: 'stable-diffusion-xl',
@@ -99,6 +214,27 @@ const imageProviders: ImageProvider[] = [
     badge: 'Best Value',
     sampleImages: ['/samples/sdxl-1.jpg', '/samples/sdxl-2.jpg']
   },
+
+  // Adobe Models
+  {
+    id: 'adobe-firefly-v3',
+    name: 'Adobe Firefly',
+    displayName: 'Adobe Firefly v3',
+    description: 'Latest Firefly model with enhanced commercial safety and quality.',
+    logo: '🔥',
+    rating: 4.7,
+    pricing: { basePrice: 0.06, currency: 'USD', unit: 'image' },
+    features: ['Enhanced quality', 'Commercial license', 'Brand consistency', 'Typography integration'],
+    category: 'Commercial',
+    speed: 'medium',
+    quality: 'high',
+    censorship: 'strict',
+    styles: ['Corporate', 'Marketing', 'Photography', 'Illustration', 'Logo Design'],
+    sizes: ['1024x1024', '1408x1024', '1024x1408', '1792x1024', '1024x1792'],
+    badge: 'Latest Model',
+    isPopular: true,
+    sampleImages: ['/samples/firefly-v3-1.jpg', '/samples/firefly-v3-2.jpg']
+  },
   {
     id: 'adobe-firefly',
     name: 'Adobe Firefly',
@@ -114,8 +250,27 @@ const imageProviders: ImageProvider[] = [
     censorship: 'strict',
     styles: ['Corporate', 'Marketing', 'Photography', 'Illustration', 'Logo Design'],
     sizes: ['1024x1024', '1408x1024', '1024x1408', '1792x1024', '1024x1792'],
-    isPopular: true,
     sampleImages: ['/samples/firefly-1.jpg', '/samples/firefly-2.jpg']
+  },
+
+  // Leonardo AI Models
+  {
+    id: 'leonardo-ai-phoenix',
+    name: 'Leonardo AI',
+    displayName: 'Leonardo Phoenix',
+    description: 'Latest Leonardo model with enhanced photorealism and creative control.',
+    logo: '🎮',
+    rating: 4.6,
+    pricing: { basePrice: 0.03, currency: 'USD', unit: 'image' },
+    features: ['Enhanced photorealism', 'Creative control', 'Game assets', 'Character design'],
+    category: 'Gaming',
+    speed: 'fast',
+    quality: 'high',
+    censorship: 'moderate',
+    styles: ['Game Art', 'Character Design', 'Photorealistic', 'Concept Art', '3D Models'],
+    sizes: ['512x512', '768x768', '1024x1024', '1024x576', '576x1024'],
+    badge: 'Latest Model',
+    sampleImages: ['/samples/leonardo-phoenix-1.jpg', '/samples/leonardo-phoenix-2.jpg']
   },
   {
     id: 'leonardo-ai',
@@ -134,23 +289,197 @@ const imageProviders: ImageProvider[] = [
     sizes: ['512x512', '768x768', '1024x1024', '1024x576', '576x1024'],
     sampleImages: ['/samples/leonardo-1.jpg', '/samples/leonardo-2.jpg']
   },
+
+  // Ideogram Models
   {
-    id: 'flux-pro',
-    name: 'Flux Pro',
-    displayName: 'Flux Pro',
-    description: 'Next-generation model with superior prompt adherence and fine details.',
-    logo: '🌟',
-    rating: 4.8,
-    pricing: { basePrice: 0.055, currency: 'USD', unit: 'image' },
-    features: ['Ultra-high resolution', 'Precise control', 'Fast generation', 'Text rendering'],
-    category: 'Premium',
+    id: 'ideogram-v2',
+    name: 'Ideogram',
+    displayName: 'Ideogram v2',
+    description: 'Advanced text-in-image generation with exceptional typography control.',
+    logo: '📝',
+    rating: 4.5,
+    pricing: { basePrice: 0.04, currency: 'USD', unit: 'image' },
+    features: ['Perfect text rendering', 'Typography control', 'Logo design', 'Brand materials'],
+    category: 'Typography',
+    speed: 'medium',
+    quality: 'high',
+    censorship: 'moderate',
+    styles: ['Logo Design', 'Typography', 'Brand Design', 'Poster Art', 'Marketing'],
+    sizes: ['1024x1024', '1024x1456', '1456x1024', '1024x1820', '1820x1024'],
+    badge: 'Text Master',
+    sampleImages: ['/samples/ideogram-1.jpg', '/samples/ideogram-2.jpg']
+  },
+
+  // Playground AI Models
+  {
+    id: 'playground-v2-5',
+    name: 'Playground AI',
+    displayName: 'Playground v2.5',
+    description: 'Enhanced creative model with better aesthetic quality and style control.',
+    logo: '🎪',
+    rating: 4.4,
+    pricing: { basePrice: 0.035, currency: 'USD', unit: 'image' },
+    features: ['Enhanced aesthetics', 'Style control', 'Creative freedom', 'Mixed media'],
+    category: 'Creative',
     speed: 'fast',
     quality: 'high',
     censorship: 'moderate',
-    styles: ['Photorealistic', 'Hyperrealistic', 'Fine Art', 'Technical', 'Scientific'],
-    sizes: ['1024x1024', '1344x768', '768x1344', '1536x640', '640x1536'],
-    badge: 'Newest',
-    sampleImages: ['/samples/flux-1.jpg', '/samples/flux-2.jpg']
+    styles: ['Mixed Media', 'Creative Art', 'Digital Painting', 'Illustrations', 'Fantasy'],
+    sizes: ['512x512', '768x768', '1024x1024', '1536x1024', '1024x1536'],
+    badge: 'Creative Pro',
+    sampleImages: ['/samples/playground-1.jpg', '/samples/playground-2.jpg']
+  },
+
+  // SDXL Specialty Models
+  {
+    id: 'juggernaut-xl',
+    name: 'Juggernaut XL',
+    displayName: 'Juggernaut XL',
+    description: 'Photorealistic SDXL fine-tune optimized for portrait and character generation.',
+    logo: '👤',
+    rating: 4.6,
+    pricing: { basePrice: 0.02, currency: 'USD', unit: 'image' },
+    features: ['Photorealistic portraits', 'Character focus', 'High detail', 'SDXL based'],
+    category: 'Portraits',
+    speed: 'fast',
+    quality: 'high',
+    censorship: 'moderate',
+    styles: ['Photorealistic', 'Portraits', 'Characters', 'Professional Photos', 'Headshots'],
+    sizes: ['768x768', '1024x1024', '1536x1024', '1024x1536'],
+    badge: 'Portrait Pro',
+    sampleImages: ['/samples/juggernaut-1.jpg', '/samples/juggernaut-2.jpg']
+  },
+  {
+    id: 'realvisxl',
+    name: 'RealVisXL',
+    displayName: 'RealVisXL',
+    description: 'Ultra-realistic SDXL model for photographic quality images.',
+    logo: '📷',
+    rating: 4.5,
+    pricing: { basePrice: 0.02, currency: 'USD', unit: 'image' },
+    features: ['Ultra-realistic', 'Photographic quality', 'Natural lighting', 'SDXL based'],
+    category: 'Realistic',
+    speed: 'fast',
+    quality: 'high',
+    censorship: 'moderate',
+    styles: ['Photography', 'Realistic', 'Natural', 'Documentary', 'Lifestyle'],
+    sizes: ['768x768', '1024x1024', '1536x1024', '1024x1536'],
+    badge: 'Ultra Realistic',
+    sampleImages: ['/samples/realvis-1.jpg', '/samples/realvis-2.jpg']
+  },
+
+  // Anime/Artistic Models
+  {
+    id: 'animagine-xl',
+    name: 'Animagine XL',
+    displayName: 'Animagine XL',
+    description: 'Premier anime and manga style generation model.',
+    logo: '🎌',
+    rating: 4.7,
+    pricing: { basePrice: 0.02, currency: 'USD', unit: 'image' },
+    features: ['Anime excellence', 'Manga styles', 'Character consistency', 'Japanese aesthetics'],
+    category: 'Anime',
+    speed: 'fast',
+    quality: 'high',
+    censorship: 'moderate',
+    styles: ['Anime', 'Manga', 'Japanese Art', 'Character Art', 'Kawaii'],
+    sizes: ['768x768', '1024x1024', '1024x1456', '1456x1024'],
+    badge: 'Anime Master',
+    sampleImages: ['/samples/animagine-1.jpg', '/samples/animagine-2.jpg']
+  },
+
+  // ControlNet and Specialized Models
+  {
+    id: 'controlnet-openpose',
+    name: 'ControlNet OpenPose',
+    displayName: 'ControlNet OpenPose',
+    description: 'Pose-controlled image generation using OpenPose skeletal guidance.',
+    logo: '🤸',
+    rating: 4.3,
+    pricing: { basePrice: 0.025, currency: 'USD', unit: 'image' },
+    features: ['Pose control', 'Human figures', 'Skeletal guidance', 'Precise positioning'],
+    category: 'Control',
+    speed: 'medium',
+    quality: 'high',
+    censorship: 'moderate',
+    styles: ['Human Poses', 'Figure Drawing', 'Character Art', 'Action Scenes', 'Dance'],
+    sizes: ['512x512', '768x768', '1024x1024'],
+    badge: 'Pose Control',
+    sampleImages: ['/samples/openpose-1.jpg', '/samples/openpose-2.jpg']
+  },
+  {
+    id: 'controlnet-depth',
+    name: 'ControlNet Depth',
+    displayName: 'ControlNet Depth',
+    description: 'Depth-map controlled generation for 3D structure preservation.',
+    logo: '🗻',
+    rating: 4.2,
+    pricing: { basePrice: 0.025, currency: 'USD', unit: 'image' },
+    features: ['Depth control', '3D structure', 'Spatial awareness', 'Architecture'],
+    category: 'Control',
+    speed: 'medium',
+    quality: 'high',
+    censorship: 'moderate',
+    styles: ['Architecture', 'Landscapes', '3D Scenes', 'Interior Design', 'Environments'],
+    sizes: ['512x512', '768x768', '1024x1024'],
+    badge: 'Depth Control',
+    sampleImages: ['/samples/depth-1.jpg', '/samples/depth-2.jpg']
+  },
+
+  // Specialized Use Cases
+  {
+    id: 'qr-code-monster',
+    name: 'QR Code Monster',
+    displayName: 'QR Code Monster',
+    description: 'Artistic QR code generation that maintains scanability.',
+    logo: '📱',
+    rating: 4.1,
+    pricing: { basePrice: 0.03, currency: 'USD', unit: 'image' },
+    features: ['Artistic QR codes', 'Scannable designs', 'Brand integration', 'Custom patterns'],
+    category: 'Utility',
+    speed: 'fast',
+    quality: 'medium',
+    censorship: 'strict',
+    styles: ['QR Art', 'Functional Design', 'Brand QR', 'Creative Codes', 'Marketing'],
+    sizes: ['512x512', '768x768', '1024x1024'],
+    badge: 'QR Specialist',
+    sampleImages: ['/samples/qr-1.jpg', '/samples/qr-2.jpg']
+  },
+
+  // Additional Providers from Replicate/PiAPI/Segmind
+  {
+    id: 'deliberate-v3',
+    name: 'Deliberate',
+    displayName: 'Deliberate v3',
+    description: 'Versatile model balancing realism and artistic style.',
+    logo: '🎯',
+    rating: 4.4,
+    pricing: { basePrice: 0.02, currency: 'USD', unit: 'image' },
+    features: ['Balanced style', 'Versatile', 'Good details', 'Flexible prompting'],
+    category: 'Balanced',
+    speed: 'fast',
+    quality: 'high',
+    censorship: 'moderate',
+    styles: ['Semi-realistic', 'Artistic', 'Portraits', 'Scenes', 'Concepts'],
+    sizes: ['512x512', '768x768', '1024x1024'],
+    sampleImages: ['/samples/deliberate-1.jpg', '/samples/deliberate-2.jpg']
+  },
+  {
+    id: 'dreamshaper-xl',
+    name: 'DreamShaper XL',
+    displayName: 'DreamShaper XL',
+    description: 'Artistic model with enhanced creativity and style flexibility.',
+    logo: '💭',
+    rating: 4.3,
+    pricing: { basePrice: 0.02, currency: 'USD', unit: 'image' },
+    features: ['Creative styles', 'Artistic freedom', 'Style blending', 'Imaginative'],
+    category: 'Artistic',
+    speed: 'fast',
+    quality: 'high',
+    censorship: 'permissive',
+    styles: ['Surreal', 'Fantasy', 'Abstract', 'Imaginative', 'Creative Art'],
+    sizes: ['768x768', '1024x1024', '1536x1024', '1024x1536'],
+    sampleImages: ['/samples/dreamshaper-1.jpg', '/samples/dreamshaper-2.jpg']
   }
 ];
 
