@@ -2,18 +2,18 @@
 
 ![Hi-API Logo](public/logo.png)
 
-> **The most comprehensive AI service aggregator platform with 50+ providers for image, video, audio, 3D, and text generation. Professional tools for creators and developers.**
+> **The most comprehensive AI service aggregator platform with 114+ providers for image, video, audio, 3D, and text generation. Professional tools for creators and developers.**
 
 🌟 **Live Demo**: [https://flickinny11.github.io/Grabbing-dingos/](https://flickinny11.github.io/Grabbing-dingos/)
 
 ## ✨ Features
 
 ### 🎨 **Multi-Category AI Services**
-- **Image Generation**: DALL-E 3, Midjourney, Stable Diffusion XL, Adobe Firefly, Leonardo AI, Flux Pro
-- **Video Generation**: Minimax Video-01, Kling AI, Runway Gen-3, Pika Labs, Luma Dream Machine
-- **Audio Generation**: ElevenLabs, Murf AI, Stability Audio, AIVA, Soundful
-- **3D Generation**: Meshy, Luma AI, Kaedim, CSM
-- **Text & Language**: GPT-4, Claude 3, Gemini Pro, Cohere, Llama 2
+- **Image Generation**: DALL-E 3 HD, Midjourney v7, Flux Pro v2, Stable Diffusion 3.5, Adobe Firefly v3, Leonardo Phoenix, Ideogram v2, Playground v2.5, Animagine XL, ControlNet variants, and 12+ more specialized models
+- **Video Generation**: Runway Gen-4 & Turbo, Google Imagen Video Gen-3/Gen-2, Hunyuan Video Pro/Lite, Wan2.1 (480p/720p), Minimax Video-01, Kling AI v1.5, Pika 2.0, Luma Dream Machine v2, and 12+ more cutting-edge models
+- **Audio Generation**: ElevenLabs Turbo v2.5, Suno v4, Udio v2, OpenAI TTS HD, Murf AI v3, Stable Audio 2.0, Resemble AI, LALAL.AI, Beatoven AI, and 18+ more voice, music, and sound effect generators
+- **3D Generation**: Meshy v4, Luma Genie, NVIDIA GET3D, Spline AI, Alpha3D, Ready Player Me, NeRF Studio, 3D Gaussian Splatting, and 12+ more specialized 3D creation tools
+- **Text & Language**: GPT-4 Turbo, Claude 3 Opus/Sonnet/Haiku, Gemini Ultra/Pro/Flash, Llama 3 405B/70B/8B, Mistral Large, Code Llama 70B, DeepSeek Coder v2, and 17+ more advanced language models
 
 ### 🎯 **Modern Design**
 - **Glass Morphism UI** with electric blue and neon cyan theme
@@ -160,36 +160,47 @@ interface Provider {
 
 ### Supported Services
 
-#### Image Generation (15+ providers)
-- OpenAI DALL-E 3
-- Midjourney v6
-- Stable Diffusion XL
-- Adobe Firefly
-- Leonardo AI
-- Flux Pro
-- Playground AI
-- Ideogram
-- And more...
+#### Image Generation (22+ providers)
+- **Latest Models**: DALL-E 3 HD, Midjourney v7, Flux Pro v2, Stable Diffusion 3.5
+- **Specialized**: Adobe Firefly v3, Leonardo Phoenix, Ideogram v2, Playground v2.5
+- **Open Source**: Stable Diffusion XL, Flux Dev, Flux Schnell
+- **Fine-tuned**: Juggernaut XL, RealVisXL, Animagine XL, Deliberate v3, DreamShaper XL
+- **Control**: ControlNet OpenPose, ControlNet Depth, QR Code Monster
+- And more cutting-edge models...
 
-#### Video Generation (12+ providers)
-- Minimax Video-01
-- Kling AI
-- Runway Gen-3
-- Pika Labs
-- Luma Dream Machine
-- Stable Video Diffusion
-- Synthesia
-- And more...
+#### Video Generation (20+ providers)
+- **Runway**: Gen-4, Gen-4 Turbo, Gen-3 Alpha
+- **Google**: Imagen Video Gen-3, Imagen Video Gen-2
+- **Asian Leaders**: Hunyuan Video Pro/Lite, Minimax Video-01, Kling AI v1.5, Wan2.1 (480p/720p)
+- **Creative**: Pika 2.0, Luma Dream Machine v2, Morph Studio, AnimateDiff
+- **Open Source**: Stable Video XL, Zeroscope v2, CogVideo, Gen-2 Stability
+- And more innovative models...
 
-#### Audio Generation (18+ providers)
-- ElevenLabs
-- Murf AI
-- Stability Audio
-- AIVA
-- Soundful
-- Boomy
-- Musicfy
-- And more...
+#### Audio Generation (27+ providers)
+- **Voice Synthesis**: ElevenLabs Turbo v2.5/Premium, OpenAI TTS HD, Azure Speech, Google Cloud TTS, Murf AI v3, Speechify, Replica Studios, Resemble AI
+- **Music Generation**: Suno v4, Udio v2, Stable Audio 2.0, MusicGen, AIVA v4, Boomy Pro, Soundful v2, Beatoven AI
+- **Audio Enhancement**: Adobe Enhance, Descript Overdub, LALAL.AI
+- **Specialized**: Endel AI, Voicemod AI, HarmonAI, Freesound AI, AudioCraft
+- And more comprehensive audio tools...
+
+#### 3D Generation (20+ providers)
+- **Leading Platforms**: Meshy v4, Luma Genie, CSM v3, NVIDIA GET3D
+- **Specialized Tools**: Spline AI, Kaedim v2, Alpha3D, Masterpiece X, Polycam AI
+- **Open Source**: OpenAI Shap-E, OpenAI Point-E, DreamFusion
+- **Character & Avatar**: Ready Player Me, Meshcapade
+- **Architecture**: Planner 5D AI, RoomGPT 3D
+- **Cutting-edge**: NeRF Studio, 3D Gaussian Splatting, Hexagon 3D AI, Echo3D AI
+- And more revolutionary 3D tools...
+
+#### Text & Language (25+ providers)
+- **OpenAI**: GPT-4 Turbo, GPT-4, GPT-3.5 Turbo
+- **Anthropic**: Claude 3 Opus, Claude 3 Sonnet, Claude 3 Haiku
+- **Google**: Gemini Ultra, Gemini Pro, Gemini Flash
+- **Meta**: Llama 3 405B, Llama 3 70B, Llama 3 8B
+- **Specialized**: Code Llama 70B, DeepSeek Coder v2, Mistral Large/Medium, Cohere Command R+
+- **Regional**: Qwen Turbo, Yi Large
+- **Creative & Math**: GPT-4 Creative/Math, Claude Creative/Analysis
+- And more advanced language models...
 
 ## 📱 Usage Examples
 
